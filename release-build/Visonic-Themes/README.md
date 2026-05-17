@@ -6,26 +6,26 @@
 
 ### Egoism · 液态光影（6 款）
 
-| 主题名称 | CSS 文件 | 风格 | 色调 | 预览 |
-|----------|----------|------|------|------|
-| Visonic Egoism - Fancy | `visonic-egoism-fancy.css` | 暖焰流光 | 暖橙 | ![Fancy](images/egoism-fancy.png) |
-| Visonic Egoism - Geek | `visonic-egoism-geek.css` | 炽热朋克 | 蜜桃粉 | ![Geek](images/egoism-geek.png) |
-| Visonic Egoism - Hope | `visonic-egoism-hope.css` | 希望之光 | 靛蓝 | ![Hope](images/egoism-hope.png) |
-| Visonic Egoism - Joint | `visonic-egoism-joint.css` | 紫金交汇 | 紫金 | ![Joint](images/egoism-joint.png) |
-| Visonic Egoism - Solaris | `visonic-egoism-solaris.css` | 日暮玫瑰 | 玫红 | ![Solaris](images/egoism-solaris.png) |
-| Visonic Egoism - Thinking | `visonic-egoism-thinking.css` | 思维之海 | 青蓝 | ![Thinking](images/egoism-thinking.png) |
+| 主题名称 | CSS 文件 | 风格 | 色调 |
+|----------|----------|------|------|
+| Visonic Egoism - Fancy | `visonic-egoism-fancy.css` | 暖焰流光 | 暖橙 |
+| Visonic Egoism - Geek | `visonic-egoism-geek.css` | 炽热朋克 | 蜜桃粉 |
+| Visonic Egoism - Hope | `visonic-egoism-hope.css` | 希望之光 | 靛蓝 |
+| Visonic Egoism - Joint | `visonic-egoism-joint.css` | 紫金交汇 | 紫金 |
+| Visonic Egoism - Solaris | `visonic-egoism-solaris.css` | 日暮玫瑰 | 玫红 |
+| Visonic Egoism - Thinking | `visonic-egoism-thinking.css` | 思维之海 | 青蓝 |
 
 ### Streamer · 流光系列（7 款）
 
-| 主题名称 | CSS 文件 | 风格 | 色调 | 预览 |
-|----------|----------|------|------|------|
-| Visonic Streamer - Matrix | `visonic-streamer-matrix.css` | 赛博朋克 / 霓虹光效 | 暗色绿 | ![Matrix](images/streamer-matrix.png) |
-| Visonic Streamer - Nebula | `visonic-streamer-nebula.css` | 宇宙深空 / 星云紫光 | 暗色紫 | ![Nebula](images/streamer-nebula.png) |
-| Visonic Streamer - Ember | `visonic-streamer-ember.css` | 熔岩暗夜 / 烈焰燃烧 | 暗色红 | ![Ember](images/streamer-ember.png) |
-| Visonic Streamer - Frost | `visonic-streamer-frost.css` | 极地冰川 / 冰霜之蓝 | 暗色蓝 | ![Frost](images/streamer-frost.png) |
-| Visonic Streamer - Indigo | `visonic-streamer-indigo.css` | 液体靛蓝 / 油膜虹彩 | 暗色紫蓝 | ![Indigo](images/streamer-indigo.png) |
-| Visonic Streamer - Sakura | `visonic-streamer-sakura.css` | 樱花飞舞 / 可爱清新 | 亮色粉 | ![Sakura](images/streamer-sakura.png) |
-| Visonic Streamer - Sunset | `visonic-streamer-sunset.css` | 落日余晖 / 温暖治愈 | 亮色橙 | ![Sunset](images/streamer-sunset.png) |
+| 主题名称 | CSS 文件 | 风格 | 色调 |
+|----------|----------|------|------|
+| Visonic Streamer - Matrix | `visonic-streamer-matrix.css` | 赛博朋克 / 霓虹光效 | 暗色绿 |
+| Visonic Streamer - Nebula | `visonic-streamer-nebula.css` | 宇宙深空 / 星云紫光 | 暗色紫 |
+| Visonic Streamer - Ember | `visonic-streamer-ember.css` | 熔岩暗夜 / 烈焰燃烧 | 暗色红 |
+| Visonic Streamer - Frost | `visonic-streamer-frost.css` | 极地冰川 / 冰霜之蓝 | 暗色蓝 |
+| Visonic Streamer - Indigo | `visonic-streamer-indigo.css` | 液体靛蓝 / 油膜虹彩 | 暗色紫蓝 |
+| Visonic Streamer - Sakura | `visonic-streamer-sakura.css` | 樱花飞舞 / 可爱清新 | 亮色粉 |
+| Visonic Streamer - Sunset | `visonic-streamer-sunset.css` | 落日余晖 / 温暖治愈 | 亮色橙 |
 
 ## 安装方法
 
@@ -62,7 +62,7 @@
 ## 目录结构
 
 ```
-Visonic-Themes/
+Visonic/
 ├── LICENSE
 ├── README.md
 ├── themes/                         # 13 个主题（平铺）

@@ -1,0 +1,2834 @@
+/*
+ * ╔══════════════════════════════════════════════════════════════════════╗
+ * ║                                                                      ║
+ * ║  ███████╗██╗██╗  ████████╗██████╗  █████╗ ██╗    ██╗  █████╗       ║
+ * ║  ██╔════╝██║██║  ╚══██╔══╝██╔══██╗██╔══██╗██║    ██║ ██╔══██╗      ║
+ * ║  █████╗  ██║██║     ██║   ██████╔╝███████║██║ █╗ ██║ ███████║      ║
+ * ║  ██╔══╝  ██║██║     ██║   ██╔══██╗██╔══██║██║███╗██║ ██╔══██║      ║
+ * ║  ██║     ██║███████╗██║   ██║  ██║██║  ██║╚███╔███╔╝ ██║  ██║      ║
+ * ║  ╚═╝     ╚═╝╚══════╝╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝ ╚══╝╚══╝  ╚═╝  ╚═╝      ║
+ * ║                                                                      ║
+ * ║         —— Streamer · Indigo（靛蓝） ——                                  ║
+ * ║                                                                      ║
+ * ║  Version:  1.0.0                                                     ║
+ * ║  Style:    Premium Dark / Liquid Indigo / Oil-on-Water Iridescence   ║
+ * ║  Design:   Liquid light & shadow flowing effects — Visonic Streamer  ║
+ * ║            series 7th variant. 30 keyframe animations, iridescent    ║
+ * ║            gradients, glass morphism, aurora code bars.              ║
+ * ║                                                                      ║
+ * ║  Color:    Liquid Indigo — deep dark bg, violet/indigo primary,     ║
+ * ║            electric cyan secondary, warm amber accent               ║
+ * ║                                                                      ║
+ * ║  Install:  Copy to Typora themes folder, restart and select          ║
+ * ║            "Visonic - Streamer - Indigo" from the theme menu.         ║
+ * ║                                                                      ║
+ * ║  Pure CSS  — No JS plugin, no LESS imports, no external resources   ║
+ * ║                                                                      ║
+ * ╚══════════════════════════════════════════════════════════════════════╝
+ */
+
+
+/* ========================================================================
+   SECTION 1: KEYFRAMES — All Liquid Animations
+   ======================================================================== */
+
+/* --- 1.1 Liquid Background Shift --- */
+@keyframes liquidBgShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* --- 1.2 Liquid Texture Float --- */
+@keyframes liquidTextureFloat {
+  0%, 100% {
+    opacity: 0.018;
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    opacity: 0.03;
+    transform: translate(2px, -1px) scale(1.02);
+  }
+  66% {
+    opacity: 0.022;
+    transform: translate(-1px, 2px) scale(0.99);
+  }
+}
+
+/* --- 1.3 H1 Liquid Metal Title Sweep --- */
+@keyframes h1LiquidSweep {
+  0% {
+    background-position: -300% center;
+  }
+  100% {
+    background-position: 300% center;
+  }
+}
+
+/* --- 1.4 H1 Reflection Pulse --- */
+@keyframes h1ReflectionPulse {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* --- 1.5 H2 Iridescent Border Shift --- */
+@keyframes h2IridescentBorder {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* --- 1.6 H2 Glow Breathe --- */
+@keyframes h2GlowBreathe {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(139, 92, 246, 0.1), 0 0 20px rgba(139, 92, 246, 0.03);
+    opacity: 0.6;
+  }
+  25% {
+    box-shadow: 0 0 12px rgba(139, 92, 246, 0.2), 0 0 30px rgba(99, 102, 241, 0.06);
+    opacity: 0.75;
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(99, 102, 241, 0.25), 0 0 40px rgba(139, 92, 246, 0.08), 0 0 60px rgba(34, 211, 238, 0.04);
+    opacity: 1;
+  }
+  75% {
+    box-shadow: 0 0 12px rgba(139, 92, 246, 0.2), 0 0 30px rgba(99, 102, 241, 0.06);
+    opacity: 0.75;
+  }
+}
+
+/* --- 1.7 H3 Liquid Droplet Pulse --- */
+@keyframes h3DropletPulse {
+  0%, 100% {
+    transform: translateY(-50%) scale(1);
+    box-shadow: 0 0 4px rgba(139, 92, 246, 0.4), 0 0 8px rgba(99, 102, 241, 0.15);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-50%) scale(1.25);
+    box-shadow: 0 0 8px rgba(139, 92, 246, 0.6), 0 0 16px rgba(99, 102, 241, 0.3), 0 0 24px rgba(34, 211, 238, 0.1);
+    opacity: 1;
+  }
+}
+
+/* --- 1.8 Code Aurora Bar Flow --- */
+@keyframes codeAuroraFlow {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 300% center;
+  }
+}
+
+/* --- 1.9 Code Scan Line --- */
+@keyframes codeScanLine {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(2000%);
+    opacity: 0;
+  }
+}
+
+/* --- 1.10 Blockquote Liquid Border Flow --- */
+@keyframes bqLiquidBorder {
+  0%, 100% {
+    border-color: rgba(139, 92, 246, 0.15);
+    box-shadow: 0 0 0 transparent, inset 0 0 0 transparent;
+  }
+  20% {
+    border-color: rgba(99, 102, 241, 0.3);
+    box-shadow: 0 0 12px rgba(139, 92, 246, 0.06), inset 0 0 8px rgba(99, 102, 241, 0.02);
+  }
+  40% {
+    border-color: rgba(34, 211, 238, 0.25);
+    box-shadow: 0 0 16px rgba(34, 211, 238, 0.08), inset 0 0 12px rgba(34, 211, 238, 0.03);
+  }
+  60% {
+    border-color: rgba(245, 158, 11, 0.2);
+    box-shadow: 0 0 12px rgba(245, 158, 11, 0.06), inset 0 0 8px rgba(245, 158, 11, 0.02);
+  }
+  80% {
+    border-color: rgba(139, 92, 246, 0.3);
+    box-shadow: 0 0 14px rgba(139, 92, 246, 0.07), inset 0 0 10px rgba(139, 92, 246, 0.025);
+  }
+}
+
+/* --- 1.11 Blockquote Glass Shimmer --- */
+@keyframes bqGlassShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* --- 1.12 Link Liquid Shine --- */
+@keyframes linkLiquidShine {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* --- 1.13 Link Underline Liquid Flow --- */
+@keyframes linkUnderlineFlow {
+  0%, 100% {
+    background-position: 0% 100%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+}
+
+/* --- 1.14 HR Liquid Flow --- */
+@keyframes hrLiquidFlow {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* --- 1.15 HR Glow Center --- */
+@keyframes hrGlowCenter {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+/* --- 1.16 Table Row Liquid Shimmer --- */
+@keyframes rowLiquidShimmer {
+  0% {
+    background-position: -300% 0;
+  }
+  100% {
+    background-position: 300% 0;
+  }
+}
+
+/* --- 1.17 Table Header Liquid Gradient --- */
+@keyframes tableHeaderGradient {
+  0%, 100% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+}
+
+/* --- 1.18 Image Iridescent Aura --- */
+@keyframes imgIridescentAura {
+  0%, 100% {
+    box-shadow:
+      0 8px 24px rgba(0, 0, 0, 0.3),
+      0 0 0 1px rgba(139, 92, 246, 0.1),
+      0 0 20px rgba(139, 92, 246, 0.05);
+  }
+  25% {
+    box-shadow:
+      0 8px 24px rgba(0, 0, 0, 0.3),
+      0 0 0 1px rgba(99, 102, 241, 0.3),
+      0 0 30px rgba(99, 102, 241, 0.1),
+      0 0 50px rgba(99, 102, 241, 0.05);
+  }
+  50% {
+    box-shadow:
+      0 8px 24px rgba(0, 0, 0, 0.3),
+      0 0 0 1px rgba(34, 211, 238, 0.3),
+      0 0 35px rgba(34, 211, 238, 0.12),
+      0 0 60px rgba(34, 211, 238, 0.06);
+  }
+  75% {
+    box-shadow:
+      0 8px 24px rgba(0, 0, 0, 0.3),
+      0 0 0 1px rgba(245, 158, 11, 0.2),
+      0 0 25px rgba(139, 92, 246, 0.08),
+      0 0 45px rgba(139, 92, 246, 0.04);
+  }
+}
+
+/* --- 1.19 Mark Liquid Glow --- */
+@keyframes markLiquidGlow {
+  0%, 100% {
+    background-position: -200% 100%;
+    box-shadow: 0 0 4px rgba(245, 158, 11, 0.1);
+  }
+  50% {
+    background-position: 200% 100%;
+    box-shadow: 0 0 12px rgba(245, 158, 11, 0.2);
+  }
+}
+
+/* --- 1.20 Strong Liquid Emboss --- */
+@keyframes strongLiquidEmboss {
+  0% {
+    background-position: -150% center;
+  }
+  100% {
+    background-position: 150% center;
+  }
+}
+
+/* --- 1.21 List Dot Liquid Pulse --- */
+@keyframes listDotPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 3px rgba(139, 92, 246, 0.4);
+  }
+  50% {
+    transform: scale(1.3);
+    box-shadow: 0 0 8px rgba(139, 92, 246, 0.6), 0 0 16px rgba(99, 102, 241, 0.2);
+  }
+}
+
+/* --- 1.22 Task Check Liquid Fill --- */
+@keyframes taskCheckFill {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.4);
+  }
+  30% {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15);
+  }
+  60% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 6px rgba(99, 102, 241, 0.08);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(139, 92, 246, 0);
+  }
+}
+
+/* --- 1.23 Task Check Ripple --- */
+@keyframes taskCheckRipple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(139, 92, 246, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 12px rgba(139, 92, 246, 0);
+  }
+}
+
+/* --- 1.24 Inline Code Liquid Capsule --- */
+@keyframes codeCapsuleShimmer {
+  0%, 100% {
+    border-color: rgba(139, 92, 246, 0.15);
+    box-shadow: 0 0 4px transparent;
+  }
+  50% {
+    border-color: rgba(99, 102, 241, 0.3);
+    box-shadow: 0 0 8px rgba(139, 92, 246, 0.08);
+  }
+}
+
+/* --- 1.25 Diamond Spin (HR decoration) --- */
+@keyframes diamondSpin {
+  0%, 100% {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(225deg) scale(1.4);
+  }
+}
+
+/* --- 1.26 Italic Liquid Wave --- */
+@keyframes italicLiquidWave {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 12px;
+  }
+}
+
+/* --- 1.27 Fade In Up --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- 1.28 Liquid Color Cycle --- */
+@keyframes liquidColorCycle {
+  0%, 100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(30deg);
+  }
+}
+
+/* --- 1.29 Gentle Float --- */
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+/* --- 1.30 Focus Glow Ring --- */
+@keyframes focusGlowRing {
+  0%, 100% {
+    box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2), 0 0 0 4px rgba(139, 92, 246, 0.05);
+  }
+  50% {
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.35), 0 0 0 6px rgba(99, 102, 241, 0.1);
+  }
+}
+
+
+/* ========================================================================
+   SECTION 2: ROOT VARIABLES — Liquid Indigo Design System
+   ======================================================================== */
+
+:root {
+  /* --- 2.1 Layout --- */
+  --v-max-width: 900px;
+
+  /* --- 2.2 Core Background & Foreground --- */
+  --bg-primary: #0b0d17;
+  --bg-secondary: #0f1120;
+  --bg-tertiary: #141729;
+  --bg-elevated: #181b2e;
+  --bg-surface: #1c2035;
+  --fg-primary: #e2e8f0;
+  --fg-secondary: #94a3b8;
+  --fg-muted: #64748b;
+  --fg-dim: #475569;
+
+  /* --- 2.3 Brand Colors — Liquid Indigo --- */
+  --vi-purple: #8b5cf6;
+  --vi-indigo: #6366f1;
+  --vi-violet: #7c3aed;
+  --vi-cyan: #22d3ee;
+  --vi-teal: #14b8a6;
+  --vi-amber: #f59e0b;
+  --vi-rose: #f43f5e;
+  --vi-emerald: #10b981;
+  --vi-sky: #0ea5e9;
+  --vi-pink: #ec4899;
+
+  /* --- 2.4 Primary / Secondary / Accent --- */
+  --color-primary: var(--vi-purple);
+  --color-secondary: var(--vi-cyan);
+  --color-accent: var(--vi-amber);
+
+  /* --- 2.5 Glow System --- */
+  --glow-primary: rgba(139, 92, 246, 0.5);
+  --glow-secondary: rgba(99, 102, 241, 0.5);
+  --glow-cyan: rgba(34, 211, 238, 0.5);
+  --glow-amber: rgba(245, 158, 11, 0.5);
+  --glow-soft: rgba(139, 92, 246, 0.08);
+  --glow-text: 0 0 8px var(--glow-primary);
+  --glow-text-intense: 0 0 12px var(--glow-primary), 0 0 24px var(--glow-secondary);
+  --glow-box: 0 0 8px var(--glow-primary);
+  --glow-box-intense: 0 0 16px var(--glow-primary), 0 0 32px var(--glow-secondary), 0 0 48px rgba(34, 211, 238, 0.15);
+
+  /* --- 2.6 Border Colors --- */
+  --border-default: rgba(139, 92, 246, 0.12);
+  --border-subtle: rgba(139, 92, 246, 0.06);
+  --border-hover: rgba(139, 92, 246, 0.25);
+  --border-focus: rgba(139, 92, 246, 0.4);
+
+  /* --- 2.7 Surface Colors (VLOOK-inspired) --- */
+  --surface-panel: rgba(139, 92, 246, 0.03);
+  --surface-panel-hover: rgba(139, 92, 246, 0.06);
+  --surface-blockquote: rgba(139, 92, 246, 0.02);
+  --surface-code: #0d0f1a;
+  --surface-code-gutter: #0d0f1a;
+  --surface-table-header: rgba(139, 92, 246, 0.06);
+  --surface-table-alt: rgba(139, 92, 246, 0.02);
+  --surface-table-hover: rgba(139, 92, 246, 0.05);
+
+  /* --- 2.8 Typography --- */
+  --font-body: "Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Noto Sans SC", "Noto Sans CJK SC", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans SC",
+    sans-serif;
+  --font-heading: "Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Noto Sans SC", "PingFang SC", "Microsoft YaHei",
+    sans-serif;
+  --font-code: "JetBrains Mono", "Cascadia Code", "Fira Code", "SF Mono",
+    "Cascadia Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  --line-height-body: 1.8;
+  --line-height-heading: 1.3;
+  --letter-spacing-body: 0.3px;
+  --letter-spacing-heading: 0.5px;
+
+  /* --- 2.9 Spacing --- */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-section: 2em;
+
+  /* --- 2.10 Border Radius --- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-full: 9999px;
+
+  /* --- 2.11 Code Syntax Colors --- */
+  --code-keyword: #c792ea;
+  --code-variable: #e2e8f0;
+  --code-function: #8b5cf6;
+  --code-param: #7fdbca;
+  --code-string: #ecc48d;
+  --code-comment: #546e7a;
+  --code-type: #22d3ee;
+  --code-property: #80cbc4;
+  --code-number: #f78c6c;
+  --code-meta: #8b5cf6;
+  --code-operator: #c792ea;
+  --code-tag: #c792ea;
+  --code-attribute: #22d3ee;
+  --code-builtin: #6366f1;
+  --code-selected: rgba(139, 92, 246, 0.25);
+
+  /* --- 2.12 UI Element Colors --- */
+  --selection-bg: rgba(139, 92, 246, 0.35);
+  --selection-fg: #ffffff;
+  --scrollbar-thumb: linear-gradient(180deg, var(--vi-purple), var(--vi-indigo));
+  --scrollbar-thumb-hover: var(--vi-purple);
+  --scrollbar-track: transparent;
+
+  /* --- 2.13 Transition System --- */
+  --transition-fast: 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-normal: 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-smooth: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.4);
+
+  /* --- 2.14 Extended Color Palette (VLOOK-inspired) --- */
+  --ac-rd: #ef4444;
+  --ac-rd-bg: rgba(239, 68, 68, 0.08);
+  --ac-og: #f97316;
+  --ac-og-bg: rgba(249, 115, 22, 0.08);
+  --ac-ye: #eab308;
+  --ac-ye-bg: rgba(234, 179, 8, 0.08);
+  --ac-gn: #22c55e;
+  --ac-gn-bg: rgba(34, 197, 94, 0.08);
+  --ac-cy: #06b6d4;
+  --ac-cy-bg: rgba(6, 182, 212, 0.08);
+  --ac-bu: #3b82f6;
+  --ac-bu-bg: rgba(59, 130, 246, 0.08);
+  --ac-vn: #8b5cf6;
+  --ac-vn-bg: rgba(139, 92, 246, 0.08);
+  --ac-pu: #a855f7;
+  --ac-pu-bg: rgba(168, 85, 247, 0.08);
+  --ac-ro: #f43f5e;
+  --ac-ro-bg: rgba(244, 63, 94, 0.08);
+  --ac-pk: #ec4899;
+  --ac-pk-bg: rgba(236, 72, 153, 0.08);
+  --ac-sk: #38bdf8;
+  --ac-sk-bg: rgba(56, 189, 248, 0.08);
+  --ac-gy: #94a3b8;
+  --ac-gy-bg: rgba(148, 163, 184, 0.08);
+  --ac-aq: #2dd4bf;
+  --ac-aq-bg: rgba(45, 212, 191, 0.08);
+  --ac-la: #a78bfa;
+  --ac-la-bg: rgba(167, 139, 250, 0.08);
+
+  /* --- 2.15 Liquid Gradient Presets --- */
+  --gradient-liquid: linear-gradient(135deg, #8b5cf6, #6366f1, #22d3ee, #8b5cf6);
+  --gradient-aurora: linear-gradient(90deg, #8b5cf6, #6366f1, #22d3ee, #14b8a6, #f59e0b, #8b5cf6);
+  --gradient-iridescent: linear-gradient(135deg, #8b5cf6, #6366f1, #3b82f6, #06b6d4, #8b5cf6);
+  --gradient-warm: linear-gradient(135deg, #f59e0b, #f97316, #ef4444);
+  --gradient-metal: linear-gradient(135deg, #94a3b8, #e2e8f0, #94a3b8, #64748b);
+}
+
+
+/* ========================================================================
+   SECTION 3: BASE / RESET STYLES
+   ======================================================================== */
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--fg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-family: var(--font-body);
+  letter-spacing: var(--letter-spacing-body);
+}
+
+/* --- 3.1 Write Area --- */
+#write {
+  max-width: var(--v-max-width);
+  margin: 0 auto;
+  padding: 30px 40px 80px;
+  line-height: var(--line-height-body);
+  color: var(--fg-primary);
+  word-break: break-word;
+  word-wrap: break-word;
+  text-align: left;
+  position: relative;
+  z-index: 0;
+  box-sizing: border-box;
+}
+
+/* --- 3.2 Liquid Background Texture --- */
+#write::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: -2;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(139, 92, 246, 0.04), transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(99, 102, 241, 0.03), transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(34, 211, 238, 0.02), transparent 50%);
+  background-size: 200% 200%, 200% 200%, 200% 200%;
+  animation: liquidBgShift 20s ease-in-out infinite;
+}
+
+/* --- 3.3 Dot Texture Overlay --- */
+#write::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: -1;
+  background-image: radial-gradient(circle, rgba(139, 92, 246, 0.07) 0.8px, transparent 0.8px);
+  background-size: 24px 24px;
+  opacity: 0.02;
+  animation: liquidTextureFloat 12s ease-in-out infinite;
+}
+
+/* --- 3.4 Source View --- */
+#typora-sourceview {
+  color: var(--fg-secondary);
+  font-family: var(--font-code);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+
+/* ========================================================================
+   SECTION 4: TYPOGRAPHY — Headings, Paragraphs, Text
+   ======================================================================== */
+
+/* --- 4.1 Paragraph --- */
+#write p {
+  color: var(--fg-secondary);
+  margin: 10px 0;
+  font-size: 1rem;
+  word-spacing: 0.3px;
+  line-height: var(--line-height-body);
+  transition: color var(--transition-fast);
+}
+
+#write p:hover {
+  color: var(--fg-primary);
+}
+
+/* --- 4.2 Headings — General --- */
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  color: var(--fg-primary);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: var(--line-height-heading);
+  letter-spacing: var(--letter-spacing-heading);
+  transition: all var(--transition-normal);
+}
+
+/* --- 4.3 H1 — Liquid Metal Title --- */
+#write h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 2em auto 1.5em;
+  position: relative;
+  width: fit-content;
+  min-width: 120px;
+  min-height: 1.5em;
+  padding: 12px 0 18px;
+  border-bottom: none;
+  cursor: text;
+  letter-spacing: 3px;
+  background: linear-gradient(
+    90deg,
+    #e2e8f0 0%,
+    #c7d2fe 15%,
+    #e2e8f0 25%,
+    #a78bfa 40%,
+    #e2e8f0 55%,
+    #67e8f9 70%,
+    #e2e8f0 85%,
+    #c7d2fe 100%
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: h1LiquidSweep 6s ease-in-out infinite;
+}
+
+/* H1 bottom decorative line */
+#write h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 80px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg,
+    transparent,
+    var(--vi-purple),
+    var(--vi-indigo),
+    var(--vi-cyan),
+    var(--vi-indigo),
+    var(--vi-purple),
+    transparent
+  );
+  background-size: 200% 100%;
+  transform: translateX(-50%);
+  transition: width var(--transition-smooth), box-shadow var(--transition-smooth);
+  box-shadow: 0 0 8px var(--glow-primary);
+}
+
+#write h1:not(.md-focus):hover {
+  transform: translateY(-2px);
+  filter: drop-shadow(0 0 12px var(--glow-primary));
+}
+
+#write h1:hover::after,
+#write h1.md-focus::after {
+  width: 100%;
+  box-shadow: var(--glow-box-intense);
+  animation: h1LiquidSweep 3s linear infinite;
+}
+
+/* --- 4.4 H2 — Iridescent Border --- */
+#write h2 {
+  font-size: 1.45rem;
+  width: fit-content;
+  margin: 1.5em 0 1em;
+  padding: 10px 20px 10px 24px;
+  border-radius: var(--radius-lg);
+  cursor: default;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(139, 92, 246, 0.02);
+  background-image: radial-gradient(ellipse at left center, rgba(139, 92, 246, 0.08), transparent 65%);
+  background-repeat: no-repeat;
+  border-top: 1px solid var(--border-subtle);
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-left: none;
+  position: relative;
+  animation: h2GlowBreathe 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* H2 iridescent left border */
+#write h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+  background: linear-gradient(
+    180deg,
+    var(--vi-purple),
+    var(--vi-indigo),
+    var(--vi-cyan),
+    var(--vi-teal),
+    var(--vi-amber),
+    var(--vi-pink),
+    var(--vi-purple)
+  );
+  background-size: 100% 300%;
+  animation: h2IridescentBorder 4s ease-in-out infinite;
+}
+
+#write h2:hover,
+#write h2.md-focus {
+  color: var(--vi-cyan);
+  background-image: radial-gradient(ellipse at left center, rgba(139, 92, 246, 0.15), transparent 70%);
+  border-bottom-color: var(--border-hover);
+  text-shadow: 0 0 12px var(--glow-primary);
+  transform: translateY(-1px);
+}
+
+/* --- 4.5 H3 — Liquid Droplet Decoration --- */
+#write h3 {
+  position: relative;
+  padding-left: 20px;
+  font-size: 1.25rem;
+  margin: 1.3em 0 0.8em;
+}
+
+#write h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, var(--vi-cyan), var(--vi-purple));
+  transform: translateY(-50%);
+  transition: all var(--transition-bounce);
+  animation: h3DropletPulse 3s ease-in-out infinite;
+}
+
+#write h3:hover,
+#write h3.md-focus {
+  color: var(--vi-purple);
+  padding-left: 26px;
+  text-shadow: var(--glow-text);
+}
+
+#write h3:hover::before,
+#write h3.md-focus::before {
+  width: 12px;
+  height: 12px;
+}
+
+/* --- 4.6 H4 — Glowing Diamond --- */
+#write h4 {
+  margin: 1.2em 0 0.8em;
+  font-size: 1.12rem;
+  display: flex;
+  align-items: center;
+}
+
+#write h4::before {
+  content: "";
+  margin-right: 12px;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--vi-purple);
+  border-radius: 2px;
+  transform: rotate(45deg);
+  transition: all var(--transition-bounce);
+  box-shadow: 0 0 6px var(--glow-primary);
+  flex-shrink: 0;
+}
+
+#write h4:hover,
+#write h4.md-focus {
+  color: var(--vi-purple);
+  text-shadow: var(--glow-text);
+  transform: translateX(5px);
+}
+
+#write h4:hover::before,
+#write h4.md-focus::before {
+  transform: rotate(45deg) scale(1.4);
+  box-shadow: var(--glow-text-intense);
+  background: var(--vi-cyan);
+}
+
+/* --- 4.7 H5 — Hollow Ring --- */
+#write h5 {
+  margin: 1.2em 0 0.8em;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+}
+
+#write h5::before {
+  content: "";
+  margin-right: 12px;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border: 1.5px solid var(--vi-purple);
+  border-radius: 50%;
+  box-sizing: border-box;
+  transition: all var(--transition-bounce);
+  flex-shrink: 0;
+}
+
+#write h5:hover,
+#write h5.md-focus {
+  color: var(--vi-purple);
+  text-shadow: var(--glow-text);
+  transform: translateX(5px);
+}
+
+#write h5:hover::before,
+#write h5.md-focus::before {
+  background-color: var(--vi-purple);
+  border-color: var(--vi-purple);
+  box-shadow: var(--glow-text-intense);
+  transform: scale(1.3);
+}
+
+/* --- 4.8 H6 — Dash Accent --- */
+#write h6 {
+  margin: 1.2em 0 0.8em;
+  font-size: 1rem;
+  color: var(--fg-secondary);
+}
+
+#write h6::before {
+  content: "—";
+  color: var(--vi-cyan);
+  margin-right: 8px;
+  display: inline-block;
+  font-weight: 700;
+  transition: all var(--transition-fast);
+  text-shadow: 0 0 6px var(--glow-cyan);
+}
+
+#write h6:hover,
+#write h6.md-focus {
+  color: var(--vi-cyan);
+  text-shadow: var(--glow-text);
+  transform: translateX(5px);
+}
+
+/* --- 4.9 Focus States --- */
+#write h1.md-focus,
+#write h2.md-focus,
+#write h3.md-focus,
+#write h4.md-focus,
+#write h5.md-focus,
+#write h6.md-focus {
+  outline: none;
+}
+
+
+/* ========================================================================
+   SECTION 5: INLINE FORMATTING
+   ======================================================================== */
+
+/* --- 5.1 Strong / Bold — Liquid Emboss --- */
+#write strong {
+  color: var(--vi-purple);
+  font-weight: 700;
+  display: inline;
+  position: relative;
+  border-bottom: 2px solid transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  text-shadow: 0 0 2px rgba(139, 92, 246, 0.15);
+  transition: all var(--transition-fast);
+}
+
+#write strong:hover {
+  text-shadow: var(--glow-text-intense);
+  border-bottom-color: var(--vi-purple);
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(139, 92, 246, 0.08),
+    rgba(99, 102, 241, 0.12),
+    rgba(139, 92, 246, 0.08),
+    transparent
+  );
+  background-size: 300% 100%;
+  animation: strongLiquidEmboss 2s ease forwards;
+}
+
+/* --- 5.2 Emphasis / Italic — Liquid Wave --- */
+#write em {
+  font-style: italic;
+  color: var(--vi-indigo);
+  text-decoration: none !important;
+  padding: 0 2px 1px;
+  background-size: 12px 3px;
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-image: linear-gradient(
+    -45deg,
+    transparent 30%,
+    rgba(99, 102, 241, 0.3) 30%,
+    rgba(99, 102, 241, 0.3) 70%,
+    transparent 70%
+  );
+  transition: color 0.2s ease, background-image 0.2s ease;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+#write em::after,
+#write em::before {
+  content: none !important;
+  display: none !important;
+}
+
+#write em:hover {
+  color: var(--vi-purple);
+  text-shadow: var(--glow-text);
+  background-image: linear-gradient(
+    -45deg,
+    transparent 30%,
+    var(--vi-purple) 30%,
+    var(--vi-purple) 70%,
+    transparent 70%
+  );
+  animation: italicLiquidWave 0.6s linear infinite;
+}
+
+/* --- 5.3 Strikethrough --- */
+#write del {
+  text-decoration: line-through;
+  text-decoration-color: var(--vi-rose);
+  color: var(--fg-dim);
+  transition: all var(--transition-fast);
+}
+
+#write del:hover {
+  opacity: 1;
+  color: var(--vi-rose);
+  cursor: not-allowed;
+}
+
+/* --- 5.4 Mark / Highlight — Liquid Glow --- */
+#write mark {
+  background-color: transparent !important;
+  color: var(--vi-amber);
+  padding: 1px 4px;
+  margin: 0;
+  border-radius: var(--radius-sm);
+  font-weight: inherit;
+  position: relative;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background-image: linear-gradient(
+    90deg,
+    transparent 20%,
+    rgba(245, 158, 11, 0.25) 50%,
+    transparent 80%
+  );
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 200% 45%;
+  transition: all var(--transition-normal);
+}
+
+#write mark::after,
+#write mark::before {
+  content: none !important;
+  display: none !important;
+}
+
+#write mark:hover {
+  background-size: 100% 100%;
+  background-image: linear-gradient(
+    90deg,
+    rgba(245, 158, 11, 0.15),
+    rgba(245, 158, 11, 0.3),
+    rgba(245, 158, 11, 0.15)
+  );
+  color: #fde68a !important;
+  text-shadow: 0 0 12px rgba(245, 158, 11, 0.5);
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.12);
+  animation: markLiquidGlow 1.8s ease infinite;
+}
+
+
+/* ========================================================================
+   SECTION 6: LINKS — Liquid Shine
+   ======================================================================== */
+
+#write a {
+  color: var(--vi-purple);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 2px 4px;
+  margin: 0 -2px;
+  border-radius: var(--radius-sm);
+  background: none;
+  border-bottom: 1.5px solid rgba(139, 92, 246, 0.3);
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+#write a:not(.md-toc-inner):hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px var(--glow-primary), 0 0 16px var(--glow-secondary);
+  border-bottom-color: transparent;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(139, 92, 246, 0.12),
+    rgba(99, 102, 241, 0.18),
+    rgba(34, 211, 238, 0.08),
+    transparent
+  );
+  background-size: 300% 100%;
+  animation: linkLiquidShine 1.2s ease forwards;
+}
+
+#write a:visited {
+  color: var(--vi-indigo);
+  opacity: 0.85;
+}
+
+#write a:visited:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px var(--glow-secondary), 0 0 16px var(--glow-cyan);
+  opacity: 1;
+}
+
+
+/* ========================================================================
+   SECTION 7: LISTS — Liquid Dots
+   ======================================================================== */
+
+::marker {
+  color: var(--vi-purple);
+  text-shadow: 0 0 4px var(--glow-primary);
+  transition: all var(--transition-fast);
+}
+
+li.md-list-item {
+  margin: 0.35rem 0;
+}
+
+#write ol,
+#write ul {
+  margin-top: 0;
+  margin-left: 20px;
+  margin-bottom: 8px;
+  padding-left: 14px;
+}
+
+#write ul {
+  list-style-type: disc;
+}
+
+#write ul ul {
+  list-style-type: circle;
+}
+
+#write ul ul ul {
+  list-style-type: square;
+}
+
+#write ol {
+  list-style-type: decimal;
+}
+
+#write ol ol {
+  list-style-type: lower-alpha;
+}
+
+#write li section {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  line-height: 1.75rem;
+  text-align: justify;
+  color: var(--fg-primary);
+  font-weight: 400;
+}
+
+/* Nested list color variation */
+#write ul ul ::marker {
+  color: var(--vi-indigo);
+}
+
+#write ul ul ul ::marker {
+  color: var(--vi-cyan);
+}
+
+#write ol ::marker {
+  color: var(--vi-amber);
+  text-shadow: 0 0 4px var(--glow-amber);
+}
+
+
+/* ========================================================================
+   SECTION 8: TASK LISTS — Liquid Check
+   ======================================================================== */
+
+.task-list-item {
+  position: relative;
+}
+
+.task-list-item input {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: block;
+  -webkit-appearance: initial;
+  appearance: initial;
+  position: absolute;
+  top: 9px;
+  left: -19px;
+  margin: 0;
+  cursor: pointer;
+  outline: 0;
+  z-index: 1;
+}
+
+.task-list-item input::before {
+  content: ' ';
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(139, 92, 246, 0.3);
+  transition: all var(--transition-bounce);
+  box-sizing: border-box;
+}
+
+.task-list-item input:hover::before {
+  border-color: rgba(139, 92, 246, 0.6);
+  box-shadow: 0 0 8px rgba(139, 92, 246, 0.15);
+}
+
+.task-list-item input:checked::before {
+  border: 1.5px solid var(--vi-purple);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(99, 102, 241, 0.15));
+  box-shadow: 0 0 10px var(--glow-primary), inset 0 0 6px rgba(139, 92, 246, 0.25);
+  animation: taskCheckFill 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.4) forwards;
+}
+
+.task-list-item input::after {
+  content: ' ';
+  position: absolute;
+  top: 0.325rem;
+  left: 0.28rem;
+  width: 0.6rem;
+  height: 0.4rem;
+  border: 2.5px solid #fff;
+  border-top: 0;
+  border-right: 0;
+  transform: rotate(-45deg) scale(0);
+  opacity: 0;
+  transition: all var(--transition-bounce);
+}
+
+.task-list-item input:checked::after {
+  opacity: 1;
+  transform: rotate(-45deg) scale(1);
+  animation: taskCheckRipple 0.8s ease-out;
+}
+
+.task-list-item p {
+  position: relative;
+  display: inline;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background-image: linear-gradient(
+    rgba(139, 92, 246, 0.25),
+    rgba(139, 92, 246, 0.25)
+  );
+  background-position: 0 50%;
+  background-size: 0 1.5px;
+  background-repeat: no-repeat;
+  transition:
+    background-size var(--transition-normal),
+    color var(--transition-normal),
+    opacity var(--transition-normal);
+  text-decoration: none !important;
+}
+
+.task-list-item input:checked + p {
+  color: var(--fg-dim);
+  opacity: 0.5;
+  background-size: 100% 1.5px;
+}
+
+
+/* ========================================================================
+   SECTION 9: CODE BLOCKS — Aurora Code
+   ======================================================================== */
+
+/* --- 9.1 Code Block Container --- */
+.md-fences {
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+  margin: 20px 0;
+  border-radius: var(--radius-lg);
+  background-color: var(--surface-code);
+  border: 1px solid var(--border-default);
+  transition: all var(--transition-normal);
+}
+
+.md-fences.md-focus {
+  z-index: 100;
+  border-color: var(--border-focus);
+  box-shadow: 0 0 24px rgba(139, 92, 246, 0.08);
+}
+
+/* --- 9.2 Language Label Bar --- */
+.md-fences:not([lang="mermaid"])::before {
+  content: attr(lang);
+  font-family: var(--font-code);
+  text-align: right;
+  padding-right: 16px;
+  padding-left: 16px;
+  color: rgba(139, 92, 246, 0.45);
+  display: block;
+  height: 36px;
+  line-height: 36px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  width: 100%;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  margin-bottom: 0;
+  background-color: rgba(139, 92, 246, 0.03);
+  border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.md-fences.md-focus:not([lang="mermaid"])::before {
+  background-color: rgba(139, 92, 246, 0.06);
+  border-bottom-color: var(--border-default);
+}
+
+/* --- 9.3 Aurora Top Bar --- */
+.md-fences:not([lang="mermaid"])::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--vi-purple) 10%,
+    var(--vi-indigo) 25%,
+    var(--vi-cyan) 40%,
+    var(--vi-teal) 55%,
+    var(--vi-amber) 70%,
+    var(--vi-pink) 85%,
+    var(--vi-purple) 100%
+  );
+  background-size: 300% 100%;
+  animation: codeAuroraFlow 4s linear infinite;
+  opacity: 0.6;
+  transition: opacity var(--transition-fast);
+}
+
+.md-fences:hover::after {
+  opacity: 1;
+}
+
+/* --- 9.4 Scan Line Effect --- */
+.md-fences .CodeMirror-vscrollbar::before {
+  content: '';
+  position: absolute;
+  top: 36px;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(139, 92, 246, 0.03),
+    transparent
+  );
+  animation: codeScanLine 8s linear infinite;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* --- 9.5 CodeMirror Editor Styles --- */
+.CodeMirror-wrap .CodeMirror-scroll {
+  overflow-x: auto;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+  border-left: 1px solid var(--vi-purple);
+  z-index: 3;
+}
+
+.md-fences .cm-s-inner.CodeMirror {
+  margin-top: 0;
+}
+
+.cm-s-inner.CodeMirror {
+  padding: 18px 14px 14px 22px;
+  color: var(--fg-secondary);
+  font-family: var(--font-code);
+  border-radius: var(--radius-lg);
+  background-color: var(--surface-code);
+  line-height: 1.7rem;
+  font-size: 0.9rem;
+}
+
+.CodeMirror-gutters {
+  border-right: 1px solid var(--border-subtle);
+  background: var(--surface-code-gutter);
+  white-space: nowrap;
+}
+
+pre.CodeMirror-line {
+  padding: 0 1.2rem;
+}
+
+.CodeMirror-linenumber {
+  padding: 0 3px 0 5px;
+  text-align: right;
+  color: var(--fg-dim);
+}
+
+/* --- 9.6 Code Syntax Highlighting --- */
+.cm-keyword { color: #c792ea !important; font-weight: 700 !important; }
+.cm-variable { color: #e2e8f0 !important; }
+.cm-tag { color: #c792ea !important; font-weight: 700 !important; }
+.cm-variable-2 { color: #8b5cf6 !important; }
+.cm-variable-3 { color: #7fdbca !important; }
+.cm-def { color: #8b5cf6 !important; }
+.cm-attribute { color: #22d3ee !important; }
+.cm-comment,
+.md-comment,
+.md-meta { color: #546e7a !important; font-style: italic; }
+.cm-string { color: #ecc48d !important; }
+.cm-link { color: #22d3ee !important; text-decoration: underline; }
+.cm-type { color: #22d3ee !important; font-style: italic; }
+.cm-property { color: #80cbc4 !important; }
+.cm-operator { color: #c792ea !important; }
+.cm-number { color: #f78c6c !important; }
+.cm-meta { color: #8b5cf6 !important; }
+.cm-builtin { color: #6366f1 !important; font-style: italic; }
+.cm-atom { color: #c792ea !important; font-weight: 700; }
+
+.CodeMirror-selected,
+.CodeMirror-selectedtext {
+  background: var(--code-selected) !important;
+}
+
+/* --- 9.7 Inline Code — Liquid Capsule --- */
+#write code:not(.md-fencescode) {
+  font-family: var(--font-code);
+  font-size: 0.88em;
+  letter-spacing: 0.3px;
+  background-color: rgba(139, 92, 246, 0.06);
+  color: var(--vi-purple);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  padding: 2px 8px;
+  margin: 0 2px;
+  border-radius: var(--radius-md);
+  vertical-align: middle;
+  transition: all var(--transition-bounce);
+  animation: codeCapsuleShimmer 4s ease-in-out infinite;
+}
+
+#write code:not(.md-fencescode):hover {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(99, 102, 241, 0.1));
+  color: var(--vi-cyan);
+  border-color: var(--vi-purple);
+  box-shadow: 0 0 16px rgba(139, 92, 246, 0.15), inset 0 0 8px rgba(139, 92, 246, 0.05);
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+/* --- 9.8 Keyboard Keys --- */
+#write kbd {
+  background-color: rgba(139, 92, 246, 0.06);
+  color: var(--vi-purple);
+  font-family: var(--font-code);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-bottom-width: 3px;
+  border-radius: var(--radius-md);
+  display: inline-block;
+  min-width: 1.5em;
+  text-align: center;
+  padding: 3px 8px;
+  margin: 0 3px;
+  font-size: 0.86em;
+  font-weight: 600;
+  transition: all 0.15s ease;
+  box-shadow: 0 2px 0 rgba(139, 92, 246, 0.1);
+}
+
+#write kbd:hover {
+  border-bottom-width: 1px;
+  transform: translateY(2px);
+  background-color: rgba(139, 92, 246, 0.12);
+  box-shadow: 0 0 8px var(--glow-primary);
+}
+
+/* --- 9.9 YAML Front Matter --- */
+pre.md-meta-block {
+  padding: 32px 20px 20px;
+  margin: 20px 0;
+  font-family: var(--font-code);
+  font-size: 13px;
+  color: var(--fg-secondary);
+  line-height: 1.6;
+  background-color: rgba(139, 92, 246, 0.02);
+  border: 1.5px dashed rgba(139, 92, 246, 0.15);
+  border-radius: var(--radius-lg);
+  position: relative;
+  transition: all var(--transition-normal);
+}
+
+pre.md-meta-block::after {
+  content: "META";
+  position: absolute;
+  top: 0;
+  right: 20px;
+  background: linear-gradient(135deg, var(--vi-purple), var(--vi-indigo));
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  padding: 4px 14px;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  box-shadow: 0 2px 12px var(--glow-primary);
+  pointer-events: none;
+  transition: all var(--transition-fast);
+}
+
+pre.md-meta-block:hover {
+  background-color: rgba(139, 92, 246, 0.04);
+  border-style: solid;
+  border-color: var(--vi-purple);
+  box-shadow: 0 0 24px rgba(139, 92, 246, 0.08), inset 0 0 20px rgba(139, 92, 246, 0.03);
+  transform: translateY(-2px);
+}
+
+pre.md-meta-block:hover::after {
+  box-shadow: var(--glow-box-intense);
+}
+
+
+/* ========================================================================
+   SECTION 10: BLOCKQUOTES — Liquid Glass
+   ======================================================================== */
+
+#write blockquote {
+  position: relative;
+  margin: 24px 0;
+  padding: 20px 24px 20px 52px;
+  color: var(--fg-secondary);
+  background-color: var(--surface-blockquote);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-xl);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: all var(--transition-normal);
+  overflow: hidden;
+}
+
+/* Glass shimmer overlay */
+#write blockquote::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(139, 92, 246, 0.03),
+    rgba(255, 255, 255, 0.02),
+    rgba(139, 92, 246, 0.03),
+    transparent
+  );
+  pointer-events: none;
+  transition: none;
+}
+
+/* Quote mark icon */
+#write blockquote::before {
+  content: "❝";
+  position: absolute;
+  left: 18px;
+  top: 16px;
+  font-size: 20px;
+  color: var(--vi-purple);
+  opacity: 0.35;
+  text-shadow: 0 0 12px var(--glow-primary);
+  transition: all var(--transition-bounce);
+  letter-spacing: 0;
+  line-height: 1;
+  z-index: 1;
+}
+
+#write blockquote p {
+  color: var(--fg-secondary);
+  margin-bottom: 0.5em;
+}
+
+#write blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+#write blockquote:hover,
+#write blockquote.md-focus {
+  border-color: var(--border-hover);
+  background-color: rgba(139, 92, 246, 0.05);
+  box-shadow:
+    0 0 24px rgba(139, 92, 246, 0.06),
+    0 4px 20px rgba(0, 0, 0, 0.2),
+    inset 0 0 20px rgba(139, 92, 246, 0.02);
+  transform: scale(1.005);
+  animation: bqLiquidBorder 5s ease-in-out infinite;
+}
+
+#write blockquote:hover::after {
+  animation: bqGlassShimmer 2s ease forwards;
+}
+
+#write blockquote:hover::before,
+#write blockquote.md-focus::before {
+  opacity: 0.7;
+  transform: translateX(2px) scale(1.1);
+  text-shadow: 0 0 20px var(--glow-primary);
+}
+
+/* Nested blockquotes */
+#write blockquote blockquote {
+  margin: 12px 0;
+  background-color: rgba(99, 102, 241, 0.03);
+  border-color: rgba(99, 102, 241, 0.1);
+}
+
+#write blockquote blockquote::before {
+  content: "❞";
+  color: var(--vi-indigo);
+  opacity: 0.25;
+}
+
+
+/* ========================================================================
+   SECTION 11: HORIZONTAL RULES — Liquid Flow
+   ======================================================================== */
+
+#write hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(139, 92, 246, 0.15) 10%,
+    var(--vi-purple) 25%,
+    var(--vi-indigo) 35%,
+    var(--vi-cyan) 50%,
+    var(--vi-indigo) 65%,
+    var(--vi-purple) 75%,
+    rgba(139, 92, 246, 0.15) 90%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  margin: 2.5em 0;
+  position: relative;
+  overflow: visible;
+  opacity: 0.45;
+  transition: all var(--transition-normal);
+  animation: hrLiquidFlow 5s linear infinite;
+}
+
+#write hr::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border: 1.5px solid var(--vi-purple);
+  background: var(--bg-primary);
+  border-radius: 2px;
+  transition: all var(--transition-normal);
+  box-shadow: 0 0 6px var(--glow-primary);
+  animation: diamondSpin 5s ease-in-out infinite;
+}
+
+#write hr:hover {
+  opacity: 0.85;
+  height: 1.5px;
+}
+
+#write hr:hover::after {
+  background: linear-gradient(135deg, var(--vi-purple), var(--vi-cyan));
+  border-color: var(--vi-cyan);
+  box-shadow: var(--glow-box-intense);
+  animation-duration: 2s;
+}
+
+
+/* ========================================================================
+   SECTION 12: TABLES — Liquid Surface
+   ======================================================================== */
+
+#write table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin: 24px 0;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  transition: border-color var(--transition-normal);
+}
+
+#write table:hover {
+  border-color: var(--border-hover);
+}
+
+/* Header */
+#write table th {
+  background: var(--surface-table-header);
+  background-image: linear-gradient(
+    90deg,
+    rgba(139, 92, 246, 0.08),
+    rgba(99, 102, 241, 0.06),
+    rgba(34, 211, 238, 0.04),
+    rgba(99, 102, 241, 0.06),
+    rgba(139, 92, 246, 0.08)
+  );
+  background-size: 200% 100%;
+  animation: tableHeaderGradient 6s ease-in-out infinite;
+  color: var(--vi-purple);
+  font-weight: 700;
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-default);
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+}
+
+/* Cells */
+#write table td {
+  padding: 10px 16px;
+  color: var(--fg-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+  border-right: 1px solid rgba(139, 92, 246, 0.03);
+  transition: all var(--transition-fast);
+}
+
+#write table td:last-child {
+  border-right: none;
+}
+
+#write table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Alternating rows */
+#write table tbody tr:nth-child(even) td {
+  background-color: var(--surface-table-alt);
+}
+
+/* Row hover — liquid shimmer */
+#write table tbody tr {
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+#write table tbody tr:hover td {
+  background: var(--surface-table-hover);
+  color: var(--fg-primary);
+}
+
+#write table tbody tr:hover td:first-child {
+  background-image: linear-gradient(90deg,
+    rgba(139, 92, 246, 0.1),
+    rgba(99, 102, 241, 0.06),
+    rgba(34, 211, 238, 0.03),
+    transparent
+  );
+  background-size: 300% 100%;
+  animation: rowLiquidShimmer 2s ease forwards;
+}
+
+
+/* ========================================================================
+   SECTION 13: IMAGES — Liquid Frame
+   ======================================================================== */
+
+#write p:has(img) {
+  text-align: center;
+}
+
+#write img {
+  border-radius: var(--radius-lg);
+  display: inline-block;
+  margin: 16px 5px;
+  object-fit: contain;
+  filter: brightness(0.95) contrast(1.02);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  transition: all var(--transition-normal);
+  max-width: 100%;
+  cursor: zoom-in;
+  border: 1px solid transparent;
+}
+
+#write p > img:only-child {
+  display: block;
+  margin: 24px auto;
+}
+
+#write img:hover {
+  filter: brightness(1.05) contrast(1.03);
+  transform: scale(1.02);
+  border-color: rgba(139, 92, 246, 0.2);
+  animation: imgIridescentAura 3s ease-in-out infinite;
+  z-index: 10;
+}
+
+#write figcaption {
+  display: block;
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--fg-dim);
+  text-align: center;
+  line-height: 1.5;
+  transition: color var(--transition-fast);
+  letter-spacing: 0.3px;
+}
+
+#write figure:hover > figcaption,
+#write p:hover > img + figcaption {
+  color: var(--vi-purple);
+}
+
+
+/* ========================================================================
+   SECTION 14: TOC — Table of Contents
+   ======================================================================== */
+
+.md-toc {
+  margin: 24px 0;
+  padding: 28px 32px;
+  background: var(--surface-panel);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-xl);
+  font-size: 15px;
+  color: var(--fg-secondary);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.md-toc:hover {
+  box-shadow: 0 0 28px rgba(139, 92, 246, 0.06), 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+
+.md-toc::before {
+  content: "✦  目 录  ✦";
+  display: block;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--vi-purple);
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border-default);
+  letter-spacing: 4px;
+  text-shadow: 0 0 8px var(--glow-primary);
+}
+
+.md-toc-item {
+  display: block;
+  line-height: 1.85em;
+  color: var(--fg-secondary);
+  text-decoration: none;
+  padding: 4px 14px;
+  border-radius: var(--radius-md);
+  margin: 2px 0;
+  transition: all var(--transition-fast);
+}
+
+.md-toc-item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.md-toc-h1 {
+  font-weight: 600;
+  color: var(--fg-primary);
+  margin-top: 8px;
+}
+
+.md-toc-h2 {
+  margin-left: 1em;
+  font-size: 0.95rem;
+}
+
+.md-toc-h3 {
+  margin-left: 2em;
+  font-size: 0.9rem;
+  color: var(--fg-muted);
+}
+
+.md-toc-h4 {
+  margin-left: 3em;
+  font-size: 0.85em;
+  opacity: 0.75;
+}
+
+.md-toc-item:hover {
+  background: var(--surface-panel-hover);
+  color: var(--vi-purple);
+  padding-left: 20px;
+  text-shadow: 0 0 6px var(--glow-primary);
+}
+
+
+/* ========================================================================
+   SECTION 15: CALLOUTS / ALERTS
+   ======================================================================== */
+
+.md-alert {
+  padding: 16px 20px;
+  margin: 16px 0;
+  border-radius: var(--radius-xl);
+  border: none;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-fast);
+  border-left: 4px solid;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.md-alert:hover {
+  transform: scale(1.005) translateY(-1px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.md-alert-text-container {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 12px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.md-alert-text svg {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+/* NOTE — Purple */
+.md-alert.md-alert-note {
+  background: var(--ac-vn-bg);
+  border-left-color: var(--vi-purple);
+}
+
+.md-alert-text-note {
+  color: var(--vi-purple);
+  background: rgba(139, 92, 246, 0.12);
+}
+
+/* TIP — Cyan */
+.md-alert.md-alert-tip {
+  background: var(--ac-cy-bg);
+  border-left-color: var(--vi-cyan);
+}
+
+.md-alert-text-tip {
+  color: var(--vi-cyan);
+  background: rgba(34, 211, 238, 0.12);
+}
+
+/* WARNING — Amber */
+.md-alert.md-alert-warning {
+  background: var(--ac-ye-bg);
+  border-left-color: var(--vi-amber);
+}
+
+.md-alert-text-warning {
+  color: var(--vi-amber);
+  background: rgba(245, 158, 11, 0.12);
+}
+
+/* IMPORTANT — Red */
+.md-alert.md-alert-important {
+  background: var(--ac-rd-bg);
+  border-left-color: var(--ac-rd);
+}
+
+.md-alert-text-important {
+  color: var(--ac-rd);
+  background: rgba(239, 68, 68, 0.12);
+}
+
+/* CAUTION — Rose */
+.md-alert.md-alert-caution {
+  background: var(--ac-ro-bg);
+  border-left-color: var(--vi-rose);
+}
+
+.md-alert-text-caution {
+  color: var(--vi-rose);
+  background: rgba(244, 63, 94, 0.12);
+}
+
+
+/* ========================================================================
+   SECTION 16: FOOTNOTES
+   ======================================================================== */
+
+#write .footnote-word,
+#write .footnote-ref {
+  font-weight: 400;
+  color: var(--vi-purple);
+}
+
+#write sup.md-footnote {
+  font-size: 9px;
+  padding: 2px 6px;
+  color: var(--vi-purple);
+  background: rgba(139, 92, 246, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  transition: all var(--transition-fast);
+}
+
+#write sup.md-footnote:hover {
+  background: rgba(139, 92, 246, 0.2);
+  box-shadow: 0 0 10px var(--glow-primary);
+}
+
+#write .footnote-item em {
+  font-size: 14px;
+  color: var(--fg-secondary);
+  display: block;
+  background: none;
+}
+
+
+/* ========================================================================
+   SECTION 17: MATH FORMULAS
+   ======================================================================== */
+
+.md-math-inline {
+  color: var(--vi-purple);
+}
+
+.md-mathjax-preview.md-math-block {
+  margin: 18px 0;
+  padding: 14px;
+  background: var(--surface-panel);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  transition: border-color var(--transition-fast);
+}
+
+.md-mathjax-preview.md-math-block:hover {
+  border-color: var(--border-default);
+}
+
+
+/* ========================================================================
+   SECTION 18: DETAILS / SUMMARY
+   ======================================================================== */
+
+#write details {
+  margin: 16px 0;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  background: var(--surface-panel);
+  transition: all var(--transition-normal);
+  overflow: hidden;
+}
+
+#write details:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+#write details summary {
+  padding: 14px 20px;
+  color: var(--vi-purple);
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+  letter-spacing: 0.3px;
+}
+
+#write details summary:hover {
+  background: var(--surface-panel-hover);
+  text-shadow: 0 0 8px var(--glow-primary);
+}
+
+#write details[open] > summary {
+  border-bottom-color: var(--border-default);
+}
+
+#write details > div,
+#write details > p {
+  padding: 14px 20px;
+}
+
+
+/* ========================================================================
+   SECTION 19: SIDEBAR
+   ======================================================================== */
+
+#typora-sidebar {
+  height: 100%;
+  color: var(--fg-primary);
+  font-size: 0.92rem;
+  background-color: var(--bg-secondary);
+}
+
+.file-node-content {
+  line-height: 1.5rem;
+}
+
+.file-tree-node.active > .file-node-content {
+  color: var(--vi-purple);
+  text-shadow: 0 0 4px var(--glow-primary);
+}
+
+span.file-node-title {
+  color: var(--fg-secondary);
+}
+
+.file-node-icon {
+  color: var(--vi-purple);
+  padding-right: 0.2rem;
+}
+
+.file-tree-node.active > .file-node-background {
+  font-weight: bolder;
+  border-left: 3px solid var(--vi-purple);
+  border-color: var(--vi-purple);
+  background: rgba(139, 92, 246, 0.05);
+}
+
+.active-tab-files #info-panel-tab-file .info-panel-tab-border,
+.active-tab-outline #info-panel-tab-outline .info-panel-tab-border,
+.ty-show-search #info-panel-tab-search .info-panel-tab-border {
+  border-radius: var(--radius-lg);
+  height: 3px;
+  background: linear-gradient(90deg, var(--vi-purple), var(--vi-cyan));
+  box-shadow: 0 0 6px var(--glow-primary);
+}
+
+.outline-content {
+  font-size: 0.9rem;
+}
+
+.outline-h1 > .outline-item > .outline-label {
+  font-weight: 600;
+  color: var(--fg-primary);
+}
+
+
+/* ========================================================================
+   SECTION 20: SCROLLBAR
+   ======================================================================== */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--scrollbar-thumb);
+  opacity: 0.5;
+  transition: opacity var(--transition-fast);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0.9;
+  background: var(--scrollbar-thumb-hover);
+}
+
+#outline-content::-webkit-scrollbar,
+#file-library::-webkit-scrollbar {
+  width: 4px;
+}
+
+
+/* ========================================================================
+   SECTION 21: SELECTION
+   ======================================================================== */
+
+::selection {
+  background: var(--selection-bg);
+  color: var(--selection-fg);
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ========================================================================
+   SECTION 22: MISC UI ELEMENTS
+   ======================================================================== */
+
+/* --- 22.1 Search --- */
+#md-searchpanel {
+  border-bottom: 1px solid var(--border-default);
+}
+
+/* --- 22.2 Context Menu --- */
+.context-menu {
+  background-color: var(--bg-elevated) !important;
+  border: 1px solid var(--border-default) !important;
+  border-radius: var(--radius-md) !important;
+}
+
+/* --- 22.3 Modal --- */
+.modal-dialog {
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-xl);
+}
+
+/* --- 22.4 Tooltip --- */
+.ty-tooltip {
+  background-color: var(--bg-elevated) !important;
+  border: 1px solid var(--border-default) !important;
+  border-radius: var(--radius-md) !important;
+  color: var(--fg-primary) !important;
+}
+
+/* --- 22.5 Megamenu / Dropdown --- */
+.megamenu-menu-panel {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-default);
+}
+
+/* --- 22.6 Window Controls --- */
+#top-titlebar {
+  background: var(--bg-secondary);
+}
+
+/* --- 22.7 Status Bar --- */
+#typora-quick-open {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+}
+
+/* --- 22.8 File Tree --- */
+.file-tree-node .file-node-background {
+  transition: background var(--transition-fast);
+}
+
+.file-tree-node .file-node-background:hover {
+  background: rgba(139, 92, 246, 0.05);
+}
+
+
+/* ========================================================================
+   SECTION 23: LIGHT MODE SUPPORT
+   ======================================================================== */
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-primary: #f8f9fc;
+    --bg-secondary: #f0f1f6;
+    --bg-tertiary: #e8eaf0;
+    --bg-elevated: #ffffff;
+    --bg-surface: #f4f5f9;
+    --fg-primary: #1e1b4b;
+    --fg-secondary: #374151;
+    --fg-muted: #6b7280;
+    --fg-dim: #9ca3af;
+
+    --vi-purple: #7c3aed;
+    --vi-indigo: #4f46e5;
+    --vi-cyan: #0891b2;
+    --vi-amber: #d97706;
+
+    --glow-primary: rgba(124, 58, 237, 0.3);
+    --glow-secondary: rgba(79, 70, 229, 0.3);
+    --glow-cyan: rgba(8, 145, 178, 0.3);
+    --glow-amber: rgba(217, 119, 6, 0.3);
+    --glow-soft: rgba(124, 58, 237, 0.04);
+
+    --border-default: rgba(124, 58, 237, 0.15);
+    --border-subtle: rgba(124, 58, 237, 0.08);
+    --border-hover: rgba(124, 58, 237, 0.3);
+    --border-focus: rgba(124, 58, 237, 0.5);
+
+    --surface-panel: rgba(124, 58, 237, 0.03);
+    --surface-panel-hover: rgba(124, 58, 237, 0.06);
+    --surface-blockquote: rgba(124, 58, 237, 0.03);
+    --surface-code: #f0f0f8;
+    --surface-code-gutter: #ececf5;
+    --surface-table-header: rgba(124, 58, 237, 0.06);
+    --surface-table-alt: rgba(124, 58, 237, 0.02);
+    --surface-table-hover: rgba(124, 58, 237, 0.04);
+
+    --selection-bg: rgba(124, 58, 237, 0.2);
+
+    --ac-rd-bg: rgba(239, 68, 68, 0.06);
+    --ac-og-bg: rgba(249, 115, 22, 0.06);
+    --ac-ye-bg: rgba(234, 179, 8, 0.06);
+    --ac-gn-bg: rgba(34, 197, 94, 0.06);
+    --ac-cy-bg: rgba(6, 182, 212, 0.06);
+    --ac-vn-bg: rgba(139, 92, 246, 0.06);
+    --ac-ro-bg: rgba(244, 63, 94, 0.06);
+  }
+
+  #write {
+    color: var(--fg-primary);
+  }
+
+  #write::before {
+    background:
+      radial-gradient(ellipse at 20% 50%, rgba(124, 58, 237, 0.03), transparent 60%),
+      radial-gradient(ellipse at 80% 20%, rgba(79, 70, 229, 0.02), transparent 50%);
+  }
+
+  #write p {
+    color: var(--fg-secondary);
+  }
+
+  #write h1 {
+    background: linear-gradient(
+      90deg,
+      #1e1b4b 0%,
+      #6366f1 15%,
+      #1e1b4b 25%,
+      #7c3aed 40%,
+      #1e1b4b 55%,
+      #0891b2 70%,
+      #1e1b4b 85%,
+      #6366f1 100%
+    );
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  #write img {
+    filter: brightness(0.98) contrast(1.02);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .cm-s-inner.CodeMirror {
+    background-color: var(--surface-code);
+    color: var(--fg-secondary);
+  }
+
+  .CodeMirror-gutters {
+    background: var(--surface-code-gutter);
+  }
+
+  ::marker {
+    color: var(--vi-purple);
+    text-shadow: none;
+  }
+
+  #typora-sidebar {
+    background-color: var(--bg-secondary);
+  }
+}
+
+
+/* ========================================================================
+   SECTION 24: PRINT STYLES
+   ======================================================================== */
+
+@media print {
+  #write {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  #write::before,
+  #write::after {
+    display: none !important;
+    animation: none !important;
+  }
+
+  #write h1 {
+    background: none !important;
+    -webkit-text-fill-color: #000 !important;
+    color: #000 !important;
+    animation: none !important;
+  }
+
+  #write h1::after {
+    animation: none !important;
+    background: #333 !important;
+    box-shadow: none !important;
+    width: 80px !important;
+  }
+
+  #write h2::before {
+    animation: none !important;
+    background: #6366f1 !important;
+  }
+
+  #write h3::before {
+    animation: none !important;
+  }
+
+  #write blockquote {
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    border: 1px solid #ccc !important;
+    background: #f9f9f9 !important;
+    animation: none !important;
+  }
+
+  #write blockquote::after {
+    display: none !important;
+    animation: none !important;
+  }
+
+  #write blockquote::before {
+    text-shadow: none !important;
+  }
+
+  .md-fences {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+    animation: none !important;
+  }
+
+  .md-fences::after {
+    display: none !important;
+    animation: none !important;
+  }
+
+  #write img {
+    box-shadow: none !important;
+    border: none !important;
+    animation: none !important;
+  }
+
+  #write hr {
+    animation: none !important;
+    background: linear-gradient(90deg, transparent, #999, transparent) !important;
+    opacity: 0.5 !important;
+  }
+
+  #write hr::after {
+    animation: none !important;
+    border-color: #666 !important;
+    box-shadow: none !important;
+  }
+
+  #write mark {
+    animation: none !important;
+    background: rgba(217, 119, 6, 0.25) !important;
+  }
+
+  #write strong {
+    animation: none !important;
+  }
+
+  #write em {
+    animation: none !important;
+  }
+
+  #write a {
+    text-shadow: none !important;
+    animation: none !important;
+    color: #6366f1 !important;
+  }
+
+  #write table {
+    animation: none !important;
+  }
+
+  #write table th {
+    animation: none !important;
+    background: #f0f0f5 !important;
+  }
+
+  #write table tbody tr:hover td,
+  #write table tbody tr:hover td:first-child {
+    animation: none !important;
+    background: inherit !important;
+  }
+
+  code:not(.md-fencescode) {
+    animation: none !important;
+  }
+
+  .task-list-item input::before {
+    animation: none !important;
+  }
+
+  .task-list-item input::after {
+    animation: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: #000 !important;
+  }
+}
+
+
+/* ========================================================================
+   SECTION 25: ACCESSIBILITY & REDUCED MOTION
+   ======================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  #write::before {
+    animation: none !important;
+  }
+
+  #write::after {
+    animation: none !important;
+  }
+}
+
+
+/* ========================================================================
+   SECTION 26: FOCUS & KEYBOARD NAVIGATION
+   ======================================================================== */
+
+:focus-visible {
+  outline: 2px solid var(--vi-purple);
+  outline-offset: 2px;
+}
+
+#write a:focus-visible {
+  outline: 2px solid var(--vi-purple);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.md-fences:focus-within {
+  animation: focusGlowRing 2s ease-in-out infinite;
+}
+
+
+/* ========================================================================
+   SECTION 27: RESPONSIVE ADJUSTMENTS
+   ======================================================================== */
+
+@media (max-width: 768px) {
+  #write {
+    padding: 20px 20px 60px;
+  }
+
+  #write h1 {
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+  }
+
+  #write h2 {
+    font-size: 1.3rem;
+  }
+
+  #write h3 {
+    font-size: 1.15rem;
+  }
+
+  #write blockquote {
+    padding: 16px 16px 16px 44px;
+  }
+
+  #write table {
+    font-size: 0.85rem;
+  }
+
+  .md-toc {
+    padding: 20px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  #write {
+    padding: 16px 14px 50px;
+  }
+
+  #write h1 {
+    font-size: 1.4rem;
+  }
+
+  #write h2 {
+    font-size: 1.15rem;
+    padding: 8px 14px 8px 18px;
+  }
+
+  #write h3 {
+    font-size: 1.05rem;
+    padding-left: 16px;
+  }
+
+  #write blockquote {
+    padding: 14px 14px 14px 38px;
+    margin: 16px 0;
+  }
+}
+
+
+/* ========================================================================
+   SECTION 28: SPECIAL ELEMENT DECORATIONS
+   ======================================================================== */
+
+/* --- 28.1 Mermaid Diagrams --- */
+.md-diagram-panel {
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  background: var(--surface-panel);
+  margin: 20px 0;
+  padding: 16px;
+  transition: all var(--transition-fast);
+}
+
+.md-diagram-panel:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* --- 28.2 Definition Lists --- */
+#write dl {
+  margin: 16px 0;
+  padding: 0;
+}
+
+#write dt {
+  font-weight: 700;
+  color: var(--vi-purple);
+  margin-top: 12px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+#write dd {
+  color: var(--fg-secondary);
+  padding-left: 20px;
+  margin: 6px 0;
+}
+
+/* --- 28.3 Abbreviations --- */
+#write abbr {
+  color: var(--vi-cyan);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--vi-cyan);
+  cursor: help;
+  transition: all var(--transition-fast);
+}
+
+#write abbr:hover {
+  border-bottom-style: solid;
+  text-shadow: 0 0 6px var(--glow-cyan);
+}
+
+/* --- 28.4 Subscript / Superscript --- */
+#write sub,
+#write sup {
+  color: var(--vi-purple);
+  font-size: 0.8em;
+}
+
+
+/* ========================================================================
+   SECTION 29: ADDITIONAL ANIMATION UTILITIES
+   ======================================================================== */
+
+/* Smooth appear for all headings */
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+/* Subtle hover lift for block elements */
+#write blockquote:hover,
+#write table:hover,
+.md-toc:hover,
+#write details:hover {
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+/* Prevent layout shift on animations */
+#write img {
+  backface-visibility: hidden;
+}
+
+/* Smooth transition for code block language label */
+.md-fences:not([lang="mermaid"])::before {
+  transition: all var(--transition-fast);
+}
+
+
+/* ========================================================================
+   SECTION 30: DARK MODE FORCE (for Typora dark mode toggle)
+   ======================================================================== */
+
+html.dark,
+body.dark,
+.theme-dark {
+  --bg-primary: #0b0d17;
+  --bg-secondary: #0f1120;
+  --bg-tertiary: #141729;
+  --bg-elevated: #181b2e;
+  --bg-surface: #1c2035;
+  --fg-primary: #e2e8f0;
+  --fg-secondary: #94a3b8;
+  --fg-muted: #64748b;
+  --fg-dim: #475569;
+
+  --vi-purple: #8b5cf6;
+  --vi-indigo: #6366f1;
+  --vi-cyan: #22d3ee;
+  --vi-amber: #f59e0b;
+
+  --glow-primary: rgba(139, 92, 246, 0.5);
+  --glow-secondary: rgba(99, 102, 241, 0.5);
+  --glow-cyan: rgba(34, 211, 238, 0.5);
+  --glow-soft: rgba(139, 92, 246, 0.08);
+
+  --border-default: rgba(139, 92, 246, 0.12);
+  --border-subtle: rgba(139, 92, 246, 0.06);
+  --border-hover: rgba(139, 92, 246, 0.25);
+  --border-focus: rgba(139, 92, 246, 0.4);
+
+  --surface-panel: rgba(139, 92, 246, 0.03);
+  --surface-panel-hover: rgba(139, 92, 246, 0.06);
+  --surface-blockquote: rgba(139, 92, 246, 0.02);
+  --surface-code: #0d0f1a;
+  --surface-code-gutter: #0d0f1a;
+  --surface-table-header: rgba(139, 92, 246, 0.06);
+  --surface-table-alt: rgba(139, 92, 246, 0.02);
+  --surface-table-hover: rgba(139, 92, 246, 0.05);
+
+  --selection-bg: rgba(139, 92, 246, 0.35);
+  --selection-fg: #ffffff;
+
+  --scrollbar-track: transparent;
+}
+
+
+/*
+ * ╔══════════════════════════════════════════════════════════════════════╗
+ * ║                                                                      ║
+ * ║  Visonic — Streamer · Indigo（靛蓝）                                        ║
+ * ║  Premium Dark Theme for Typora                                       ║
+ * ║                                                                      ║
+ * ║  Animations: 30 liquid light keyframe animations                     ║
+ * ║  CSS Variables: 120+ design tokens                                   ║
+ * ║  Sections: 30 organized CSS sections                                ║
+ * ║                                                                      ║
+ * ║  Liquid effects include:                                             ║
+ * ║  ✓ Liquid background gradient shift                                 ║
+ * ║  ✓ H1 Liquid metal title with flowing gradient                      ║
+ * ║  ✓ H2 Iridescent rainbow-shifting border                            ║
+ * ║  ✓ H3 Pulsating liquid droplet decoration                           ║
+ * ║  ✓ Code block Aurora top bar with multi-color flow                  ║
+ * ║  ✓ Code scan line effect                                            ║
+ * ║  ✓ Blockquote liquid glass with flowing border & shimmer            ║
+ * ║  ✓ Link liquid shine sweep on hover                                 ║
+ * ║  ✓ HR liquid flow with diamond spin decoration                      ║
+ * ║  ✓ Table liquid surface with row shimmer                            ║
+ * ║  ✓ Image iridescent aura on hover                                   ║
+ * ║  ✓ Mark/highlight liquid glow animation                             ║
+ * ║  ✓ Bold text liquid emboss gradient sweep                           ║
+ * ║  ✓ List markers with liquid glow                                    ║
+ * ║  ✓ Task checkbox liquid fill & ripple animation                     ║
+ * ║  ✓ Inline code liquid capsule with breathing border                 ║
+ * ║  ✓ Italic text liquid wave stitch pattern                           ║
+ * ║  ✓ Focus glow ring for keyboard navigation                          ║
+ * ║                                                                      ║
+ * ║  Design quality features:                                            ║
+ * ║  ✓ VLOOK-inspired variable system (120+ CSS custom properties)       ║
+ * ║  ✓ Glassmorphism on blockquotes, alerts, TOC                        ║
+ * ║  ✓ Consistent spacing and typography scale                          ║
+ * ║  ✓ Light mode support with adjusted palette                         ║
+ * ║  ✓ Print-optimized with animation stripping                         ║
+ * ║  ✓ Reduced motion accessibility support                             ║
+ * ║  ✓ Responsive adjustments for mobile/tablet                         ║
+ * ║  ✓ Keyboard focus indicators                                        ║
+ * ║  ✓ Custom scrollbar styling                                         ║
+ * ║                                                                      ║
+ * ║  © Visonic Themes — Pure CSS, No Dependencies                       ║
+ * ║                                                                      ║
+ * ╚══════════════════════════════════════════════════════════════════════╝
+ */
