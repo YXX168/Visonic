@@ -4,7 +4,7 @@
 
 ## 系列总览
 
-### Egoism · 液态光影（6 款）
+### 🌊 Visonic Egoism · 液态光影（6 款）
 
 | 主题名称 | CSS 文件 | 风格 | 色调 |
 |----------|----------|------|------|
@@ -15,7 +15,7 @@
 | Visonic Egoism - Solaris | `visonic-egoism-solaris.css` | 日暮玫瑰 | 亮色玫红 / 暗色靛紫 |
 | Visonic Egoism - Thinking | `visonic-egoism-thinking.css` | 思维之海 | 亮色青蓝 / 暗色深青 |
 
-### Streamer · 流光系列（7 款）
+### ✨ Visonic Streamer · 流光系列（7 款）
 
 | 主题名称 | CSS 文件 | 风格 | 色调 |
 |----------|----------|------|------|
@@ -29,7 +29,7 @@
 
 ## 安装方法
 
-### 步骤 1：复制字体依赖（Egoism 系列必须）
+### 步骤 1：复制字体依赖（首次使用必须）
 
 将 `dependencies/visonic-fonts/` 整个文件夹复制到 Typora 主题目录下：
 
@@ -37,7 +37,7 @@
 
 ### 步骤 2：安装主题
 
-将 `themes/` 文件夹下的 13 个 `.css` 文件复制到 Typora 主题目录：
+将 `themes/` 文件夹下的 `.css` 文件复制到 Typora 主题目录：
 
 **Windows**: `C:\Users\<用户名>\AppData\Roaming\Typora\themes\`
 
@@ -45,7 +45,7 @@
 
 重启后在 `主题` 菜单中选择对应主题即可。
 
-> **提示**: `visonic-egoism-*.css` 需要 `visonic-fonts` 字体依赖才能正常渲染。`visonic-streamer-*.css` 为独立主题，无需额外依赖。
+> **提示**: `visonic-egoism-*.css` 需要 `vlook` 字体依赖才能正常渲染。`visonic-streamer-*.css` 为独立主题，无需额外依赖。
 
 ## 特性
 
@@ -65,25 +65,27 @@
 Visonic/
 ├── LICENSE
 ├── README.md
-├── themes/                    # 13 个主题（平铺）
-│   ├── visonic-egoism-fancy.css
-│   ├── visonic-egoism-geek.css
-│   ├── visonic-egoism-hope.css
-│   ├── visonic-egoism-joint.css
-│   ├── visonic-egoism-solaris.css
-│   ├── visonic-egoism-thinking.css
-│   ├── visonic-streamer-ember.css
-│   ├── visonic-streamer-frost.css
-│   ├── visonic-streamer-indigo.css
-│   ├── visonic-streamer-matrix.css
-│   ├── visonic-streamer-nebula.css
-│   ├── visonic-streamer-sakura.css
-│   └── visonic-streamer-sunset.css
+├── themes/
+│   ├── egoism/              # 液态光影系列（6 款）
+│   │   ├── visonic-egoism-fancy.css
+│   │   ├── visonic-egoism-geek.css
+│   │   ├── visonic-egoism-hope.css
+│   │   ├── visonic-egoism-joint.css
+│   │   ├── visonic-egoism-solaris.css
+│   │   └── visonic-egoism-thinking.css
+│   └── streamer/            # 流光系列（7 款）
+│       ├── visonic-streamer-matrix.css
+│       ├── visonic-streamer-nebula.css
+│       ├── visonic-streamer-ember.css
+│       ├── visonic-streamer-frost.css
+│       ├── visonic-streamer-indigo.css
+│       ├── visonic-streamer-sakura.css
+│       └── visonic-streamer-sunset.css
 └── dependencies/
-    └── visonic-fonts/         # 字体依赖（Egoism 系列需要）
-        ├── github-io/
-        ├── pages-dev/
-        └── lang/
+    └── visonic-fonts/       # 字体依赖（Egoism 系列需要）
+        ├── github-io/       # 网页端字体包
+        ├── pages-dev/       # 开发端字体包
+        └── lang/            # 多语言文件
 ```
 
 ## 许可
