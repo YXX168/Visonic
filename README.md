@@ -31,9 +31,9 @@
 
 ### 步骤 1：复制字体依赖（首次使用必须）
 
-将 `dependencies/vlook/` 整个文件夹复制到 Typora 主题目录下：
+将 `dependencies/visonic-fonts/` 整个文件夹复制到 Typora 主题目录下：
 
-**Windows**: `C:\Users\<用户名>\AppData\Roaming\Typora\themes\vlook\`
+**Windows**: `C:\Users\<用户名>\AppData\Roaming\Typora\themes\visonic-fonts\`
 
 ### 步骤 2：安装主题
 
@@ -82,7 +82,7 @@ Visonic/
 │       ├── visonic-streamer-sakura.css
 │       └── visonic-streamer-sunset.css
 └── dependencies/
-    └── vlook/               # 字体依赖（Egoism 系列需要）
+    └── visonic-fonts/       # 字体依赖（Egoism 系列需要）
         ├── github-io/       # 网页端字体包
         ├── pages-dev/       # 开发端字体包
         └── lang/            # 多语言文件
