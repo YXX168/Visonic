@@ -1,0 +1,93 @@
+# Visonic Themes for Typora
+
+> Visonic 主题系列 — 一套为 Typora 打造的霓虹动画主题全家桶，**13 款主题**覆盖全天候使用场景。
+
+## 系列总览
+
+### 🌊 Visonic Egoism · 液态光影（6 款）
+
+| 主题名称 | CSS 文件 | 风格 | 色调 |
+|----------|----------|------|------|
+| Visonic Egoism - Fancy | `visonic-egoism-fancy.css` | 暖焰流光 | 亮色橙 / 暗色橙 |
+| Visonic Egoism - Geek | `visonic-egoism-geek.css` | 炽热朋克 | 亮色粉 / 暗色红 |
+| Visonic Egoism - Hope | `visonic-egoism-hope.css` | 希望之光 | 亮色蓝 / 暗色靛蓝 |
+| Visonic Egoism - Joint | `visonic-egoism-joint.css` | 紫金交汇 | 亮色金 / 暗色紫 |
+| Visonic Egoism - Solaris | `visonic-egoism-solaris.css` | 日暮玫瑰 | 亮色玫红 / 暗色靛紫 |
+| Visonic Egoism - Thinking | `visonic-egoism-thinking.css` | 思维之海 | 亮色青蓝 / 暗色深青 |
+
+### ✨ Visonic Streamer · 流光系列（7 款）
+
+| 主题名称 | CSS 文件 | 风格 | 色调 |
+|----------|----------|------|------|
+| Visonic Streamer - Matrix | `visonic-streamer-matrix.css` | 赛博朋克 / 霓虹光效 | 暗色绿 |
+| Visonic Streamer - Nebula | `visonic-streamer-nebula.css` | 宇宙深空 / 星云紫光 | 暗色紫 |
+| Visonic Streamer - Ember | `visonic-streamer-ember.css` | 熔岩暗夜 / 烈焰燃烧 | 暗色红 |
+| Visonic Streamer - Frost | `visonic-streamer-frost.css` | 极地冰川 / 冰霜之蓝 | 暗色蓝 |
+| Visonic Streamer - Indigo | `visonic-streamer-indigo.css` | 液体靛蓝 / 油膜虹彩 | 暗色紫蓝 |
+| Visonic Streamer - Sakura | `visonic-streamer-sakura.css` | 樱花飞舞 / 可爱清新 | 亮色粉 |
+| Visonic Streamer - Sunset | `visonic-streamer-sunset.css` | 落日余晖 / 温暖治愈 | 亮色橙 |
+
+## 安装方法
+
+### 步骤 1：复制字体依赖（首次使用必须）
+
+将 `dependencies/vlook/` 整个文件夹复制到 Typora 主题目录下：
+
+**Windows**: `C:\Users\<用户名>\AppData\Roaming\Typora\themes\vlook\`
+
+### 步骤 2：安装主题
+
+将 `themes/` 文件夹下的 `.css` 文件复制到 Typora 主题目录：
+
+**Windows**: `C:\Users\<用户名>\AppData\Roaming\Typora\themes\`
+
+### 步骤 3：重启 Typora
+
+重启后在 `主题` 菜单中选择对应主题即可。
+
+> **提示**: `visonic-egoism-*.css` 需要 `vlook` 字体依赖才能正常渲染。`visonic-streamer-*.css` 为独立主题，无需额外依赖。
+
+## 特性
+
+### Egoism 系列 — 液态光影
+- **21+ 动画效果**：全局流动背景、四角流光、标题下划线光折射、代码块旋转光边框、代码光泽掠过、链接光轨、引用框扫描线、分割线流光、图片光边框、列表脉冲标记、TOC 滑动光边、页面顶部流光条、液态滚动条、选区光效、元数据呼吸、光粒子漂浮等
+- **基于 VLOOK 架构**：完整继承 VLOOK 主题体系的字体、多语言、代码高亮
+- **亮色 / 暗色**：每款主题自动适配昼夜模式
+
+### Streamer 系列 — 流光霓虹
+- **12 ~ 30 动画效果**：H1 流光扫过下划线、H2 霓虹灯条呼吸、H3 菱形旋转装饰、代码块扫描灯条、呼吸灯、Shimmer 光扫等
+- **暗色 5 款 + 亮色 2 款**：覆盖全天候使用场景
+- **Indigo 特别版**：30 个液体光影关键帧动画、虹彩渐变、玻璃拟态引用块、极光代码块灯条、液态金属标题
+
+## 目录结构
+
+```
+Visonic/
+├── LICENSE
+├── README.md
+├── themes/
+│   ├── egoism/              # 液态光影系列（6 款）
+│   │   ├── visonic-egoism-fancy.css
+│   │   ├── visonic-egoism-geek.css
+│   │   ├── visonic-egoism-hope.css
+│   │   ├── visonic-egoism-joint.css
+│   │   ├── visonic-egoism-solaris.css
+│   │   └── visonic-egoism-thinking.css
+│   └── streamer/            # 流光系列（7 款）
+│       ├── visonic-streamer-matrix.css
+│       ├── visonic-streamer-nebula.css
+│       ├── visonic-streamer-ember.css
+│       ├── visonic-streamer-frost.css
+│       ├── visonic-streamer-indigo.css
+│       ├── visonic-streamer-sakura.css
+│       └── visonic-streamer-sunset.css
+└── dependencies/
+    └── vlook/               # 字体依赖（Egoism 系列需要）
+        ├── github-io/       # 网页端字体包
+        ├── pages-dev/       # 开发端字体包
+        └── lang/            # 多语言文件
+```
+
+## 许可
+
+本项目基于 MIT-0 协议发布，可以自由使用、修改和分发，无需署名。
