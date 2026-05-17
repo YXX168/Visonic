@@ -8,12 +8,12 @@
 
 | 主题名称 | CSS 文件 | 风格 | 色调 |
 |----------|----------|------|------|
-| Visonic Egoism - Fancy | `visonic-egoism-fancy.css` | 暖焰流光 | 亮色橙 / 暗色橙 |
-| Visonic Egoism - Geek | `visonic-egoism-geek.css` | 炽热朋克 | 亮色粉 / 暗色红 |
-| Visonic Egoism - Hope | `visonic-egoism-hope.css` | 希望之光 | 亮色蓝 / 暗色靛蓝 |
-| Visonic Egoism - Joint | `visonic-egoism-joint.css` | 紫金交汇 | 亮色金 / 暗色紫 |
-| Visonic Egoism - Solaris | `visonic-egoism-solaris.css` | 日暮玫瑰 | 亮色玫红 / 暗色靛紫 |
-| Visonic Egoism - Thinking | `visonic-egoism-thinking.css` | 思维之海 | 亮色青蓝 / 暗色深青 |
+| Visonic Egoism - Fancy | `visonic-egoism-fancy.css` | 暖焰流光 | 暖橙 |
+| Visonic Egoism - Geek | `visonic-egoism-geek.css` | 炽热朋克 | 蜜桃粉 |
+| Visonic Egoism - Hope | `visonic-egoism-hope.css` | 希望之光 | 靛蓝 |
+| Visonic Egoism - Joint | `visonic-egoism-joint.css` | 紫金交汇 | 紫金 |
+| Visonic Egoism - Solaris | `visonic-egoism-solaris.css` | 日暮玫瑰 | 玫红 |
+| Visonic Egoism - Thinking | `visonic-egoism-thinking.css` | 思维之海 | 青蓝 |
 
 ### Streamer · 流光系列（7 款）
 
