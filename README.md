@@ -31,13 +31,13 @@
 
 ### 步骤 1：复制字体依赖（Egoism 系列必须）
 
-将 `dependencies/visonic-fonts/` 整个文件夹复制到 Typora 主题目录下：
+将 `visonic-fonts/` 文件夹复制到 Typora 主题目录下：
 
 **Windows**: `C:\Users\<用户名>\AppData\Roaming\Typora\themes\visonic-fonts\`
 
 ### 步骤 2：安装主题
 
-将 `themes/` 文件夹下的 13 个 `.css` 文件复制到 Typora 主题目录：
+将 13 个 `visonic-*.css` 文件复制到 Typora 主题目录：
 
 **Windows**: `C:\Users\<用户名>\AppData\Roaming\Typora\themes\`
 
@@ -65,7 +65,7 @@
 Visonic/
 ├── LICENSE
 ├── README.md
-├── themes/                    # 13 个主题（平铺）
+├── themes/                         # 13 个主题（平铺）
 │   ├── visonic-egoism-fancy.css
 │   ├── visonic-egoism-geek.css
 │   ├── visonic-egoism-hope.css
@@ -79,11 +79,10 @@ Visonic/
 │   ├── visonic-streamer-nebula.css
 │   ├── visonic-streamer-sakura.css
 │   └── visonic-streamer-sunset.css
-└── dependencies/
-    └── visonic-fonts/         # 字体依赖（Egoism 系列需要）
-        ├── github-io/
-        ├── pages-dev/
-        └── lang/
+└── visonic-fonts/                  # 字体依赖（Egoism 系列需要）
+    ├── github-io/
+    ├── pages-dev/
+    └── lang/
 ```
 
 ## 许可
