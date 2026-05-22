@@ -82,14 +82,7 @@
 }
 
 #write .md-fences::before {
-  content: "";
-  position: absolute;
-  top: -2px; left: -2px; right: -2px; bottom: -2px;
-  border-radius: calc(var(--c-br-b) + 2px);
-  background: conic-gradient(from 0deg, #e3a805, #6464d1, #e3a805, #6464d1, #e3a805);
-  animation: v-lq-rot 6s linear infinite;
-  z-index: -1;
-  opacity: 0.4;
+  display: none;
 }
 
 #write .md-fences::after {
