@@ -32,7 +32,7 @@
 ### 一键安装（Windows 推荐）
 
 1. 下载完整仓库或 Release 压缩包并解压。
-2. 双击运行 `install-windows.bat`（或 `一键安装主题.bat`）。
+2. 双击运行 `一键安装主题.bat`。
 3. 重启 Typora，在「主题」菜单中选择 Visonic 主题。
 
 脚本会自动复制 `themes/` 下的 13 个主题文件，并同步 `visonic-fonts/` 字体依赖到 Typora 主题目录。
@@ -75,8 +75,7 @@
 Visonic-Themes/
 ├── LICENSE
 ├── README.md
-├── install-windows.bat             # Windows 一键安装脚本
-├── 一键安装主题.bat                 # 中文文件名安装脚本
+├── 一键安装主题.bat                 # Windows 一键安装脚本
 ├── themes/                         # 13 个主题（平铺）
 │   ├── visonic-egoism-fancy.css
 │   ├── visonic-egoism-geek.css
