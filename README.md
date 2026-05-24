@@ -33,9 +33,13 @@
 
 1. 下载完整仓库或 Release 压缩包并解压。
 2. 双击运行 `一键安装主题.bat`。
-3. 重启 Typora，在「主题」菜单中选择 Visonic 主题。
+3. 根据提示选择安装方式：
+   - `1`：清空并替换 Typora 主题目录（脚本会先自动备份原主题目录）。
+   - `2`：保留现有主题，仅新增/覆盖 Visonic 主题（推荐）。
+4. 重启 Typora。
 
 脚本会自动复制 `themes/` 下的 13 个主题文件，并同步 `visonic-fonts/` 字体依赖到 Typora 主题目录。
+同时会创建 `github.user.css` 默认主题桥接文件，让 Typora 在默认 GitHub 主题下也自动加载 `visonic-streamer-nebula.css`。如需恢复 Typora 原默认样式，删除主题目录中的 `github.user.css` 即可。
 
 ### 手动安装
 
